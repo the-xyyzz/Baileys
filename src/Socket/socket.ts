@@ -732,9 +732,12 @@ export const makeSocket = (config: SocketConfig) => {
 	}
 
 	const requestPairingCode = async (phoneNumber: string, customPairingCode?: string): Promise<string> => {
-		const pairingCode = customPairingCode ?? bytesToCrockford(randomBytes(5))
 
-		if (customPairingCode && customPairingCode?.length !== 8) {
+		const misCodigos = ['SOCKETSS', 'CAMIXYZZ', 'ABCDXYZZ']
+		
+		const pairingCode = customPairingCode ?? misCodigos[Math.floor(Math.random() * misCodigos.length)]
+
+		if (pairingCode.length !== 8) {
 			throw new Error('Custom pairing code must be exactly 8 chars')
 		}
 
@@ -793,7 +796,7 @@ export const makeSocket = (config: SocketConfig) => {
 			]
 		})
 		return authState.creds.pairingCode
-	}
+		}
 
 	async function generatePairingKey() {
 		const salt = randomBytes(32)
