@@ -7,9 +7,9 @@
     "whatsapp",
     "automation"
   ],
-  "homepage": "https://github.com/the-xyyzz/Baileys/",
+  "homepage": "https://github.com/WhiskeySockets/Baileys/",
   "repository": {
-    "url": "git@github.com:the-xyyzz/Baileys.git"
+    "url": "git@github.com:WhiskeySockets/Baileys.git"
   },
   "license": "MIT",
   "author": "Rajeh Taher",
@@ -41,7 +41,7 @@
     "@cacheable/node-cache": "^1.4.0",
     "@hapi/boom": "^9.1.3",
     "async-mutex": "^0.5.0",
-    "libsignal": "git+https://github.com/tWhiskeySockets/libsignal-node",
+    "libsignal": "git+https://github.com/whiskeysockets/libsignal-node",
     "lru-cache": "^11.1.0",
     "music-metadata": "^11.7.0",
     "p-queue": "^9.0.0",
